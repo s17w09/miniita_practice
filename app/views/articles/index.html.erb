@@ -1,0 +1,8 @@
+ <% if @articles.present? %>
+<% @articles.each do |article| %>
+    <h2 class="text-xl mt-2 text-gray-600"><%= link_to article.title, article_path(article) %></h2> 
+    <h3 class="text-sm text-gray-600">作成日：<%= l article.created_at, format: :long%></h3>
+<% end %>
+<% else %>
+      <p>投稿がありません</p>
+<% end %>
