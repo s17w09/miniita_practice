@@ -6,11 +6,22 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <!--DOMPurifyの読み込み（HTML をサニタイズし、XSS 攻撃を防止する）-->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.0/dist/purify.min.js"></script>
+    <!--DOMPurifyの読み込み-->
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
 
-<!--qiita maekdown： の読み込ませ-->
+     <!--markedjsのCDN読み込み-->
+     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+     <!--markedjsのCDN読み込み-->
+
+    <!--kramdownの読み込ませ-->
     <%= stylesheet_link_tag 'kramdown_custom', media: 'all' %>
+     <!--kramdownの読み込ませ-->
+
+
   </head>
 
   <body>
