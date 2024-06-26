@@ -2,5 +2,5 @@
   <div class=" bg-white text-gray-600 textarea textarea-bordered w-full h-full " >
     <h1 class="text-3xl mt-5 flex justify-center"><%= @article.title %></h1>
     <h2 class="text-base mt-5 flex justify-center"><%=l @article.created_at, format: :long %></h2>
-    <h3 class="flex justify-center mt-10 bg-white"><%= render_markdown(@article.body).html_safe %></h3>
+    <h3 class="mt-10 bg-white"><%= render_markdown(@article.body).html_safe %></h3>
   </div>
